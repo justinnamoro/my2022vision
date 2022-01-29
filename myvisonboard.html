@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>My 2022 Vision</title>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            margin:0;
+        }
+        .cover{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: beige;
+            z-index: 10;
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            height:1080px;
+            background-image: url("connection.jpg");
+            background-blend-mode: color-burn;
+        }
+
+        .quote{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            text-align: center;
+            width: 100%;
+            height: 150px;
+        }
+
+        .friendships{
+            display: flex;
+            height: 250px;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        h1{
+            color: #000;
+            font-family: 'Playfair Display', serif;
+        }
+
+        P{
+            font-weight: 500;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .title{
+            display: flex;
+            margin-top: 100px;
+        }
+
+        #connection{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 48px;
+            color:#fff;
+            background-color: #538D4E;
+            width: 100px;
+            height: 100px;
+            margin-right: 5px;
+            padding-top: 25px;
+        }
+
+        #hh1{
+            background-image: url("ch.jpg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;            ;
+            height: 100%;
+            width: 33%;
+        }
+
+        #hh2{
+            background-image: url("hh.jpg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;            ;
+            height: 100%;
+            width: 33%;
+        }
+
+        #hh3{
+            background-image: url("s3core.jpg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;            ;
+            height: 100%;
+            width: 33%;
+        }
+
+        .icon-scroll,
+.icon-scroll:before{
+    position: absolute;
+  left: 50%;
+}
+
+
+.icon-scroll{
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: 300px;
+  box-shadow: inset 0 0 0 1px #000;
+  border-radius: 25px;
+}
+.icon-scroll:before{
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #000;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(46px);
+    }
+}
+    </style>
+</head>
+<body>
+<div class="cover">
+    <h1>
+        2022 vision.
+    </h1>
+    <a class='icon-scroll' href='#main'></a>
+</div>
+<div id='main'>
+    <div class='title'>
+        <h1 id='connection'>C</h1>
+        <h1 id='connection'>O</h1>
+        <h1 id='connection'>N</h1>
+        <h1 id='connection'>N</h1>
+        <h1 id='connection'>E</h1>
+        <h1 id='connection'>C</h1>
+        <h1 id='connection'>T</h1>
+        <h1 id='connection'>I</h1>
+        <h1 id='connection'>O</h1>
+        <h1 id='connection'>N</h1>
+    </div>
+
+</div>
+<div class="quote">
+    <p>"Carry each other's burdens, and in this way, you will fulfill the law of Christ."</p>
+</div>
+
+<div class="friendships">
+    <div id="hh1"></div>
+    <div id="hh2"></div>
+    <div id="hh3"></div>
+</div>
+
+<script>
+    $('button').click(function(){
+        $('html, body').animate({
+            scrollTop: $(".main").offset.top},
+            "slow");
+    })
+
+
+
+</script>
+
+</body>
+</html>
