@@ -29,6 +29,30 @@
             background-color: beige;
             z-index: 10;
         }
+
+        .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
         #main{
             display: flex;
             flex-direction: column;
@@ -91,7 +115,7 @@
             background-image: url("ch.jpg");
             background-position: center;
             background-size: contain;
-            background-repeat: no-repeat;            ;
+            background-repeat: no-repeat;            
             height: 100%;
             width: 33%;
         }
@@ -100,7 +124,7 @@
             background-image: url("hh.jpg");
             background-position: center;
             background-size: contain;
-            background-repeat: no-repeat;            ;
+            background-repeat: no-repeat;            
             height: 100%;
             width: 33%;
         }
@@ -109,7 +133,7 @@
             background-image: url("s3core.jpg");
             background-position: center;
             background-size: contain;
-            background-repeat: no-repeat;            ;
+            background-repeat: no-repeat;            
             height: 100%;
             width: 33%;
         }
@@ -152,6 +176,32 @@
         transform: translateY(46px);
     }
 }
+
+/* Responsiveness */
+
+@media only screen and (max-width:1049px) {
+    #main{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
     </style>
 </head>
 <body>
@@ -161,6 +211,7 @@
     </h1>
     <a class='icon-scroll' href='#main'></a>
 </div>
+
 <div id='main'>
     <div class='title'>
         <h1 id='connection'>C</h1>
@@ -180,11 +231,25 @@
     <p>"Carry each other's burdens, and in this way, you will fulfill the law of Christ."</p>
 </div>
 
-<div class="friendships">
-    <div id="hh1"></div>
-    <div id="hh2"></div>
-    <div id="hh3"></div>
-</div>
+<div class="row"> 
+    <div class="column">
+      <img src="ch.jpg" style="width:100%">
+      <img src="prayover.jpg" style="width:100%">
+      <img src="s3core.jpg" style="width:100%">
+      <img src="phone.jpg" style="width:100%">
+    </div>
+    <div class="column">
+        <img src="hh.jpg" style="width:100%">
+        <img src="ideclare.jpg" style="width:100%">
+        <img src="spidermen.jpg" style="width:100%">
+        <img src="touch.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="jussum.jpg" style="width:100%">
+        <img src="bullseye.jpg" style="width:100%">
+        <img src="sharmian.jpg" style="width:100%">
+      </div>
+  </div>
 
 <script>
     $('button').click(function(){
